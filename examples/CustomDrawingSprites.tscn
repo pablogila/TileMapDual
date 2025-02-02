@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=4 uid="uid://173tbn637vp1"]
+
+[ext_resource type="TileSet" uid="uid://xee4rh3e4gnk" path="res://assets/tileset/hex vert tall.tres" id="1_ydeiw"]
+[ext_resource type="Script" path="res://addons/TileMapDual/TileMapDual.gd" id="2_64ayr"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_sbpe0"]
+light_mode = 2
+
+[node name="Custom Drawing Sprites" type="Node2D"]
+
+[node name="Ice" type="TileMapLayer" parent="."]
+material = SubResource("CanvasItemMaterial_sbpe0")
+tile_map_data = PackedByteArray("AAD///7/CAABAAAAAAD+////CAABAAAAAAD+/wAACAABAAAAAAD//wAACAABAAAAAAAAAAAACAABAAAAAAAAAP//CAABAAAAAAADAP7/CAAAAAAAAAACAP//CAAAAAAAAAACAAAACAAAAAAAAAADAAAACAAAAAAAAAAEAAAACAAAAAAAAAAEAP//CAAAAAAAAAA=")
+tile_set = ExtResource("1_ydeiw")
+script = ExtResource("2_64ayr")

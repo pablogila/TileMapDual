@@ -1,0 +1,24 @@
+[gd_scene load_steps=6 format=3 uid="uid://dwvus2s8kbgpc"]
+
+[ext_resource type="TileSet" uid="uid://xee4rh3e4gnk" path="res://assets/tileset/hex vert tall.tres" id="1_lqqol"]
+[ext_resource type="Texture2D" uid="uid://cboyfp0fxdjd5" path="res://assets/cursor.svg" id="2_wrw3i"]
+[ext_resource type="Script" path="res://addons/TileMapDual/CursorDual.gd" id="3_u8pmr"]
+[ext_resource type="Script" path="res://addons/TileMapDual/TileMapDual.gd" id="5_k08c7"]
+
+[sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_6d52t"]
+light_mode = 2
+
+[node name="Hexagonal" type="Node2D"]
+
+[node name="TileMapDual" type="TileMapLayer" parent="."]
+material = SubResource("CanvasItemMaterial_6d52t")
+tile_set = ExtResource("1_lqqol")
+script = ExtResource("5_k08c7")
+
+[node name="CursorDual" type="Sprite2D" parent="." node_paths=PackedStringArray("tilemap_dual")]
+position = Vector2(515, 264)
+texture = ExtResource("2_wrw3i")
+script = ExtResource("3_u8pmr")
+tilemap_dual = NodePath("../TileMapDual")
+
+[node name="Camera2D" type="Camera2D" parent="."]
