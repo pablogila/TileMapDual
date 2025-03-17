@@ -55,6 +55,9 @@ func _process(delta: float) -> void: # Only used inside the editor
 	call_deferred('_changed')
 
 
+func _update_cells(coords: Array[Vector2i], forced_cleanup: bool) -> void:
+	print(coords)
+
 ## Called by signals when the tileset changes,
 ## or by _process inside the editor.
 func _changed() -> void:

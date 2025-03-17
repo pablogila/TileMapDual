@@ -1,10 +1,10 @@
 [gd_scene load_steps=10 format=4 uid="uid://lxo6jsdn537x"]
 
-[ext_resource type="Script" path="res://addons/TileMapDual/TileMapDual.gd" id="1_3x0d3"]
+[ext_resource type="Script" uid="uid://bafb2aji5ybl4" path="res://addons/TileMapDual/TileMapDual.gd" id="1_3x0d3"]
 [ext_resource type="Texture2D" uid="uid://cvw27ok6bgyxo" path="res://assets/tileset_sand.png" id="1_wcmjl"]
 [ext_resource type="Texture2D" uid="uid://brh05u73qytuq" path="res://assets/tileset_grass.png" id="2_nfi75"]
 [ext_resource type="Texture2D" uid="uid://cboyfp0fxdjd5" path="res://assets/cursor.svg" id="3_586lt"]
-[ext_resource type="Script" path="res://addons/TileMapDual/CursorDual.gd" id="5_adfv3"]
+[ext_resource type="Script" uid="uid://ct6jfwe0bdeph" path="res://addons/TileMapDual/CursorDual.gd" id="5_adfv3"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_346li"]
 light_mode = 2

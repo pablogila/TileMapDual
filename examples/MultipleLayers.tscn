@@ -2,9 +2,9 @@
 
 [ext_resource type="Texture2D" uid="uid://cvw27ok6bgyxo" path="res://assets/tileset_sand.png" id="1_01gf2"]
 [ext_resource type="Texture2D" uid="uid://cboyfp0fxdjd5" path="res://assets/cursor.svg" id="1_gf7xt"]
-[ext_resource type="Script" path="res://addons/TileMapDual/TileMapDual.gd" id="2_7gf43"]
+[ext_resource type="Script" uid="uid://bafb2aji5ybl4" path="res://addons/TileMapDual/TileMapDual.gd" id="2_7gf43"]
 [ext_resource type="Texture2D" uid="uid://brh05u73qytuq" path="res://assets/tileset_grass.png" id="3_4oenq"]
-[ext_resource type="Script" path="res://addons/TileMapDual/CursorDual.gd" id="4_500re"]
+[ext_resource type="Script" uid="uid://ct6jfwe0bdeph" path="res://addons/TileMapDual/CursorDual.gd" id="4_500re"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_y6ry6"]
 light_mode = 2

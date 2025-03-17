@@ -1,7 +1,7 @@
 [gd_scene load_steps=4 format=4 uid="uid://173tbn637vp1"]
 
 [ext_resource type="TileSet" uid="uid://xee4rh3e4gnk" path="res://assets/tileset/hex vert tall.tres" id="1_ydeiw"]
-[ext_resource type="Script" path="res://addons/TileMapDual/TileMapDual.gd" id="2_64ayr"]
+[ext_resource type="Script" uid="uid://bafb2aji5ybl4" path="res://addons/TileMapDual/TileMapDual.gd" id="2_64ayr"]
 
 [sub_resource type="CanvasItemMaterial" id="CanvasItemMaterial_sbpe0"]
 light_mode = 2

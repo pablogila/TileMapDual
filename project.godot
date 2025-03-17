@@ -12,7 +12,7 @@ config_version=5
 
 config/name="TileMapDual"
 run/main_scene="res://test/test.tscn"
-config/features=PackedStringArray("4.3", "Forward Plus")
+config/features=PackedStringArray("4.4", "Forward Plus")
 
 [editor_plugins]
 
