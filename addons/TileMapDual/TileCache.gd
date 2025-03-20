@@ -50,8 +50,7 @@ func update(world: TileMapLayer, edited: Array = cells.keys()) -> void:
 			sid = cached.sid
 			tile = cached.tile
 			world.set_cell(cell, cached.sid, cached.tile)
-		else:
-			cells[cell] = {'sid': sid, 'tile': tile, 'terrain': data.terrain}
+		cells[cell] = {'sid': sid, 'tile': tile, 'terrain': data.terrain}
 
 
 ##[br] Returns the terrain value of the tile at the given cell coordinates.
