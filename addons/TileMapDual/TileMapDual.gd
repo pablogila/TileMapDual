@@ -64,7 +64,7 @@ func _changed() -> void:
 ## Called when the user draws on the map or presses undo/redo.
 func _update_cells(coords: Array[Vector2i], forced_cleanup: bool) -> void:
 	print(coords)
-	_display.update(self, coords)
+	_display.update(coords)
 
 
 ##[br] Public method to add and remove tiles.

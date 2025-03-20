@@ -22,6 +22,7 @@ func _init(world: TileMapDual, tileset_watcher: TileSetWatcher) -> void:
 
 ## Activates when the TerrainDual changes.
 func _terrain_changed():
+	cached_cells.update(world)
 	_delete_layers()
 	if _tileset_watcher.tile_set != null:
 		_create_layers()
@@ -55,12 +56,12 @@ func _delete_layers():
 
 ## The TileCache computed from the last time update() was called.
 var cached_cells := TileCache.new()
-## Updates the display based on the cells changed in the TileMapLayer.
-func update(layer: TileMapLayer, updated: Array):
+## Updates the display based on the cells changed in the world TileMapDual.
+func update(updated: Array):
 	if _tileset_watcher.tile_set == null:
 		return
 	if not updated.is_empty():
-		cached_cells.update(_tileset_watcher.tile_set, layer, updated)
+		cached_cells.update(world, updated)
 		world_tiles_changed.emit(updated)
 
 

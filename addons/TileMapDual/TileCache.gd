@@ -20,35 +20,36 @@ func _init() -> void:
 
 ##[br] Updates specific cells of the TileCache based on the current layer data at those points.
 ##[br] Makes corrections in case the user accidentally places invalid tiles.
-func update(tile_set: TileSet, layer: TileMapLayer, edited: Array) -> void:
+func update(world: TileMapLayer, edited: Array = cells.keys()) -> void:
+	var tile_set := world.tile_set
 	if tile_set == null:
 		push_error('Attempted to update TileCache while tile set was null')
 		return
 	for cell in edited:
 		# Invalid cells will be treated as empty and ignored
-		var sid := layer.get_cell_source_id(cell)
+		var sid := world.get_cell_source_id(cell)
 		if sid == -1:
 			cells.erase(cell)
 			continue
 		if not tile_set.has_source(sid):
 			continue
 		var src = tile_set.get_source(sid)
-		var tile := layer.get_cell_atlas_coords(cell)
+		var tile := world.get_cell_atlas_coords(cell)
 		if not src.has_tile(tile):
 			continue
-		var data := layer.get_cell_tile_data(cell)
+		var data := world.get_cell_tile_data(cell)
 		if data == null:
 			continue
 		# Accidental cells should be reset to their previous value
 		# They will be treated as unchanged
 		if data.terrain == -1 or data.terrain_set != 0:
 			if cell not in cells:
-				layer.erase_cell(cell)
+				world.erase_cell(cell)
 				continue
 			var cached: Dictionary = cells[cell]
 			sid = cached.sid
 			tile = cached.tile
-			layer.set_cell(cell, cached.sid, cached.tile)
+			world.set_cell(cell, cached.sid, cached.tile)
 		else:
 			cells[cell] = {'sid': sid, 'tile': tile, 'terrain': data.terrain}
 
