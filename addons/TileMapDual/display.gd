@@ -112,6 +112,8 @@ func _init(world: TileMapDual, tileset_watcher: TileSetWatcher) -> void:
 	world_tiles_changed.connect(_world_tiles_changed, 1)
 	# let parent materal through to the displaylayers
 	use_parent_material = true
+	# Enable Y sorting
+	y_sort_enabled = true
 
 
 ## Updates the display based on the cells changed in the world TileMapDual.
