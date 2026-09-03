@@ -57,6 +57,12 @@ func _ready() -> void:
 	_changed()
 
 
+func _notification(what: int) -> void:
+	# Leaving the tree can be temporary, so release watcher state only on deletion.
+	if what == NOTIFICATION_PREDELETE and _tileset_watcher != null:
+		_tileset_watcher.check_tile_set(null)
+
+
 func _process(delta: float) -> void: # Only used inside the editor
 	if refresh_time < 0.0:
 		return
