@@ -55,6 +55,8 @@ func _ready() -> void:
 	# Update full tileset on first instance
 	await get_tree().process_frame
 	_changed()
+	# Initial cell updates may have run before the display existed.
+	_display.update(get_used_cells())
 
 
 func _notification(what: int) -> void:
